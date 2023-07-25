@@ -28,15 +28,29 @@ The only other place it should be used is for agency, program, and initiative ti
 To include the fonts in your application, include them using `@font-face` rule in your CSS file:
 
 ```css
+/* Proxima Nova: Regular */
+
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('./fonts/proximanova-regular.woff') format('woff'),
-      url('./fonts/proximanova-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-regular.woff') format('woff'),
+         url('../fonts/proximanova-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
-... OTHER FONTS ...
+
+/* Proxima Nova: Bold */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-bold.woff') format('woff'),
+         url('../fonts/proximanova-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ... Etc. ... */
 ```
 Be sure to update the url path to reflect the location of the font files in your application.
 
