@@ -1,7 +1,14 @@
 # Core Fonts for New York State Applications
 
-## Fonts
+## Guidelines
 
+These font files and code snippets are provided to help you build applications that are consistent with the NYS brand. This is meant to be a guide for new application builds.
+
+If you have any questions, please contact the NYS ITS UX Team.
+
+The App Style Guide: https://on.ny.gov/AppStyleGuide
+
+## Fonts
 ### Proxima Nova
 
 Proxima Nova is New York State's primary font. It should be used as the typeface for navigation, navigation elements, and all other text within the applications (e.g. buttons, labels, etc). 
@@ -40,14 +47,14 @@ html {
   font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 ```
-[View a sample CSS file.](nys-fonts.css)
+[View a sample CSS file →](css/nys-fonts.css)
 
-[View an HTML demo.](index.html)
+[View an HTML demo →](index.html)
 
 ## Font Files
 
-[View the web font files.](fonts/)
+[View the web font files →](fonts/)
 
 For non-web applications, the full font files are available from the NYS SharePoint: https://on.ny.gov/Fonts
 
-These fonts have been licensed by New York State and are available only for use in New York State applications.
+⚠️ These fonts have been licensed by New York State and are available only for use in New York State applications.
