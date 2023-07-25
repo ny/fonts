@@ -1,0 +1,121 @@
+/* ==== Load core NYS web fonts */
+
+/* D Sari: Bold */
+
+@font-face {
+    font-family: 'DSari';
+    src: url('../fonts/DSari_Bold-webfont.woff') format('woff'),
+        url('../fonts/DSari_Bold-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Proxima Nova: Regular */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-regular.woff') format('woff'),
+        url('../fonts/proximanova-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Proxima Nova: Regular Italic */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-italic.woff') format('woff'),
+        url('../fonts/proximanova-italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*! Proxima Nova: Bold */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-bold.woff') format('woff'),
+        url('../fonts/proximanova-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*! Proxima Nova: Bold Italic */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-bolditalic.woff') format('woff'),
+        url('../fonts/proximanova-bolditalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*! Proxima Nova: Light */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-light.woff') format('woff'),
+        url('../fonts/proximanova-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*! Proxima Nova: Light Italic */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-lightitalic.woff') format('woff'),
+        url('../fonts/proximanova-lightitalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*! Proxima Nova: Semibold */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-semibold.woff') format('woff'),
+        url('../fonts/proximanova-semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Setting the base font size */
+
+:root {
+    font-size: 18px; /* This is the default in most browsers */
+    --primary-font: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --secondary-font: 'DSari', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1rem; /* equals 18px; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.heading1 {
+    font-size: 2rem; /* equals 36px; */
+}
+.heading2 {
+    font-size: 1.5rem; /* equals 27px; */
+}
+.heading3 {
+    font-size: 1.25rem; /* equals 22.5px; */
+}
+.heading4 {
+    font-size: 1rem; /* equals 18px; */
+}
+button, input, select, textarea {
+    font-family: var(--primary-font);
+    font-size: 1rem; /* equals 18px; */
+}

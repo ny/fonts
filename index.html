@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Core NYS Fonts</title>
+    <link rel="stylesheet" href="./css/nys-fonts.css">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <header>
+          <img src="./img/identifier-nys.svg" alt="New York State Identifier">
+          <h1>NYS Application Fonts</h1>  
+        </header>
+        <div class="card">
+          <div class="card__body">
+            <h2 class="card__title">Guidelines</h2>
+            <p>These font files and code snippets are provided to help you build applications that are consistent with the NYS brand. This is meant to be a guide for new application builds.</p>
+            <p>If you have any questions, please contact the NYS ITS UX Team.</p>
+            <p>The App Style Guide: <a href="https://on.ny.gov/AppStyleGuide" title="App Style Guide">https://on.ny.gov/AppStyleGuide</a></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h2 class="card__title">Proxima Nova</h2>
+            <p>Proxima Nova is New York State's primary font. It should be used as the typeface for navigation, navigation elements, and all other text within the applications (e.g. buttons, labels, etc).</p>
+          </div>
+          <div class="card__footer u-proxima">
+            <!-- header sizing chart -->
+            <h1 class="heading1">Heading 1</h1>
+            <h2 class="heading2">Heading 2</h2>
+            <h3 class="heading3">Heading 3</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h2 class="card__title">D Sari</h2>
+            <p>D Sari (Bold) is closely associated with the NYS brand. It is used on the NY State brand mark, identifier, and tagline. </p>
+            <p>The only other place it should be used is for agency, program, and initiative titles when represented in lock-ups with the NY State brand mark. In applications, it should be used for Agency and Application names in the header and footer.</p>
+          </div>
+          <div class="card__footer u-desari">
+            <!-- header sizing chart -->
+            <h1 class="heading1--alt">Alt Heading 1</h1>
+            <h2 class="heading2--alt">Alt Heading 2</h2>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h2 class="card__title">Usage</h2>
+            <p>To include the fonts in your application, include them using <code>@font-face</code> rule in your CSS file:</p> 
+
+            
+              <pre><code>/* Proxima Nova: Regular */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-regular.woff') format('woff'),
+         url('../fonts/proximanova-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Proxima Nova: Bold */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proximanova-bold.woff') format('woff'),
+         url('../fonts/proximanova-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+<em>etc...</em></code></pre>
+
+            <p>Be sure to update the url path to reflect the location of the font files in your application.</p>
+            <p>Once loaded, you can reference them using them in your CSS, like this:</p>
+<pre><code>html {
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}</code>
+</pre>
+
+            <p><a href="../css/nys-fonts.css" title="Sample CSS">View the full CSS file</a> to see the recommended approach.</p>
+
+          </div>
+        </div>        
+        <div class="card">
+          <div class="card__body">
+            <h2 class="card__title">Font Files</h2>
+            <p><a href="../fonts" title="Fonts">View the web font files.</a></p>
+
+            <p>For non-web applications, the full font files are available from the NYS ITS SharePoint: <a href="https://on.ny.gov/Fonts" title="Download all NYS brand font files.">https://on.ny.gov/Fonts</a></p>
+            <p>⚠️ These fonts have been licensed by New York State and are available only for use in New York State applications.</p>
+          </div>
+        </div>
+    </main>
+    <style>
+      /* 
+       * These styles are for this prototype only. Don't
+       * include them in your website or application. 
+      */
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      :root {
+        --primary-color: #154973;
+        --secondary-color: #EFF6FB;
+        --padding-s: 1rem;
+        --padding-m: 2rem;
+        --padding-l: 4rem;
+        --padding-xl: 8rem;
+      }
+
+      header {
+        margin: var(--padding-m) 0 var(--padding-s);
+      }
+
+      header img {
+        width: clamp(8rem, 20vw, 12rem);
+      }
+
+      main {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 var(--padding-s);
+      }
+
+      .card {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+      }
+
+      .card__body {
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      pre {
+        overflow: scroll;
+        max-width: 100%;
+        display: inline-block;
+        font-size: 0.8rem;
+        background-color: var(--secondary-color);
+        padding: var(--padding-s);
+      }
+
+      a {
+        font-weight: bold;
+      }
+
+      /*breakpoints*/
+
+      @media screen and (min-width: 600px) {
+        
+        header {
+          margin: var(--padding-l) 0 var(--padding-m);
+        }
+
+        .card {
+          grid-template-columns: 0.618fr 0.382fr;
+          grid-gap: var(--padding-m);
+          margin-bottom: var(--padding-m);
+        }
+
+        .card__body {
+          grid-column: 1 / 2;
+        }
+
+        .card__footer {
+          grid-column: 2 / 3;
+          padding-left: var(--padding-m);
+          border-left: solid 1px #ccc;
+        }
+      }
+
+      /* utility classes */
+
+      .u-proxima {
+        font-family: var(--primary-font);
+      }
+
+      .u-desari {
+        font-family: var(--secondary-font);
+      }
+    </style>
+  </body>
+</html>
