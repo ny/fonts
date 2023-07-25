@@ -50,7 +50,7 @@ To include the fonts in your application, include them using `@font-face` rule i
     font-display: swap;
 }
 
-/* ... Etc. ... */
+/* ... THE REST OF THE FONTS ... */
 ```
 Be sure to update the url path to reflect the location of the font files in your application.
 
@@ -61,7 +61,7 @@ html {
   font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 ```
-[View a sample CSS file →](css/nys-fonts.css)
+[View the full CSS file →](css/nys-fonts.css)
 
 [View an HTML demo →](index.html)
 
