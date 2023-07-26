@@ -91,7 +91,7 @@
 /* Setting the base font size */
 
 :root {
-    font-size: 18px; /* This is the default in most browsers */
+    font-size: 18px;
     --primary-font: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --secondary-font: 'DSari', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

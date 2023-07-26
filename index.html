@@ -13,6 +13,14 @@
         <header>
           <?xml version="1.0" encoding="UTF-8"?>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 659.79 398.96" class="identifier-nys">
+            <!-- Create a linear gradient for this SVG-->
+            <defs>
+              <linearGradient id="identifier-nys__gradient" x1="0%" y1="0%" x2="60%" y2="0%" gradientTransform="rotate(-30)">
+                <stop offset="0%" stop-color="var(--nys-blue-dark)" />
+                <stop offset="100%" stop-color="var(--nys-blue-light)" /> 
+              </linearGradient>
+            </defs>
+
             <g class="identifier-nys__words">
               <path
                 d="m400.88,54.44l23.44,37.32v-37.22s2.64-1.85,9-1.85,9.07,1.85,9.07,1.85v64.66s-2.54,1.86-8.98,1.86-8.8-1.66-8.8-1.66l-23.53-37.31v37.11s-2.64,1.86-9.09,1.86-8.89-1.86-8.89-1.86V54.54s2.45-1.85,9-1.85,8.79,1.76,8.79,1.76Z"
@@ -132,16 +140,16 @@
 }</code>
 </pre>
 
-            <p><a href="https://github.com/ny/fonts/blob/main/css/nys-fonts.css" title="Sample CSS">View the full CSS file</a> to see the recommended approach.</p>
+            <p><a href="https://github.com/ny/fonts/blob/main/css/nys-fonts.css" title="Sample CSS">View the full CSS file</a> to see some the suggested approach for including these fonts in your web application.</p>
 
           </div>
         </div>        
         <div class="card">
           <div class="card__body">
             <h2 class="card__title">Font Files</h2>
+            <p>⚠️ These fonts have been licensed by New York State and are available only for use in New York State applications.</p>
             <p><a href="https://github.com/ny/fonts/blob/main/fonts" title="NYS Web Fonts">View the web font files.</a></p>
             <p>For non-web applications, the full font files are available from the NYS ITS SharePoint (requires authentication with a NYS account): <a href="https://on.ny.gov/Fonts" title="Download all NYS brand font files.">https://on.ny.gov/Fonts</a></p>
-            <p>⚠️ These fonts have been licensed by New York State and are available only for use in New York State applications.</p>
           </div>
         </div>
     </main>
@@ -157,9 +165,13 @@
       }
       
       :root {
+        /* Colors */
         --primary-color: #154973;
         --secondary-color: #EFF6FB;
-        --nys-yellow: #FACE00;
+        --nys-yellow: #f5aa1c;
+        --nys-blue-dark: #21409a;
+        --nys-blue-light: #27aae1;
+        /* Padding */
         --padding-s: 1rem;
         --padding-m: 2rem;
         --padding-l: 4rem;
@@ -203,14 +215,21 @@
 
       a {
         font-weight: bold;
+        color: var(--primary-color);
       }
-
       .identifier-nys__words path {
-        fill: var(--primary-color);
+        fill: var(--nys-yellow);
       }
 
       .identifier-nys__mark path {
-        fill: var(--nys-yellow);
+        fill: var(--nys-blue-dark);
+        fill: green;
+        fill: url(#identifier-nys__gradient);
+      }
+
+      #identifier-nys__gradient {
+        --color-stop-1: var(--nys-blue-light);
+        --color-stop-2: var(--nys-blue-dark);
       }
 
       /* = Breakpoints */
